@@ -1,24 +1,27 @@
 import React from 'react'
 import App from './App'
-import faker from 'faker';
 
-const Comment = () => {
+
+const Comment = ({name,timeAgo,star,comment,avatar}) => {
+//const Comment = (props) => {
+  //const name=props.name
+  //const {name,timeAgo,star,comment}=props;
     return (
       <div className="comment">
         <a className="avatar" href="/">
-          <img alt="" src={faker.image.avatar()}/>
+          <img alt="" src={avatar}/>
         </a>
         <div className="content">
-          <a className="author" href="/">Ahmed San</a>
+    <a className="author" href="/">{name}</a>
           <div className="metadata">
-            <div className="date">2 days ago</div>
+            <div className="date">{timeAgo} days ago</div>
             <div className="rating">
               <i className="star icon"></i>
-              5 Faves
+              {star} Star
             </div>
           </div>
           <div className="text">
-            React Try
+            {comment}
           </div>
         </div>
       </div>
