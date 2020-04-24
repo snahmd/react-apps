@@ -1,23 +1,24 @@
-import React from 'react'
+import React from 'react';
+import faker from 'faker';
 
 const App = () => {
   return(
-    <div class="ui comments">
-  <div class="comment">
-    <a class="avatar">
-      <img src="/images/avatar/small/stevie.jpg"/>
+    <div className="ui comments">
+  <div className="comment">
+    <a className="avatar" href="/">
+      <img alt="" src={faker.image.avatar()}/>
     </a>
-    <div class="content">
-      <a class="author">Stevie Feliciano</a>
-      <div class="metadata">
-        <div class="date">2 days ago</div>
-        <div class="rating">
-          <i class="star icon"></i>
+    <div className="content">
+      <a className="author" href="/">Ahmed San</a>
+      <div className="metadata">
+        <div className="date">2 days ago</div>
+        <div className="rating">
+          <i className="star icon"></i>
           5 Faves
         </div>
       </div>
-      <div class="text">
-        Hey guys, I hope this example comment is helping you read this documentation.
+      <div className="text">
+        React Try
       </div>
     </div>
   </div>
